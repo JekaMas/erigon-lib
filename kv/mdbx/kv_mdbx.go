@@ -189,6 +189,11 @@ func (opts MdbxOpts) WriteMergeThreshold(v uint64) MdbxOpts {
 	return opts
 }
 
+func (opts MdbxOpts) WriteShrinkThreshold(v int) MdbxOpts {
+	opts.shrinkThreshold = v
+	return opts
+}
+
 func (opts MdbxOpts) WithTableCfg(f TableCfgFunc) MdbxOpts {
 	opts.bucketsCfg = f
 	return opts
